@@ -1,0 +1,21 @@
+Because we asked Seaborn to draw two separate histograms on the exact same chart (one for survivors, and one for patients who passed away), sometimes the bars need to occupy the exact same space.
+
+By default, Seaborn makes the bars slightly transparent (see-through). So, if the color for "survived" (0) is blue, and the color for "passed away" (1) is orange, the place where they overlap will mix into a third, darker/brownish color.
+
+It’s just like mixing water-colors! That "third color" represents the ages where we have both patients who survived and patients who passed away.
+
+If the overlap is confusing, we can tell Seaborn to stop overlapping them and instead stack them on top of each other, or place them side-by-side.
+
+replace
+
+sns.histplot(data=data, x='age', hue='DEATH_EVENT')
+
+with
+
+sns.histplot(data=data, x='age', hue='DEATH_EVENT', multiple='dodge') (to place them side-by-side)
+
+or with 
+
+sns.histplot(data=data, x='age', hue='DEATH_EVENT', multiple='stack') (to stack them like building blocks)
+
+
