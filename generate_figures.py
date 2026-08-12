@@ -19,7 +19,7 @@ plt.figure(figsize=(8, 6))
 
 # We are using seaborn to draw a histogram using the 'age' column from our 'data'.
 # The 'hue' setting tells it to color the bars differently based on whether the patient passed away ('DEATH_EVENT').
-sns.histplot(data=data, x='age', hue='DEATH_EVENT')
+sns.histplot(data=data, x='age', hue='DEATH_EVENT', multiple='stack')
 
 # We are adding a title to the very top of our chart so people know what they are looking at.
 plt.title('Figure 1: Distribution of Patient Age by Survival')
