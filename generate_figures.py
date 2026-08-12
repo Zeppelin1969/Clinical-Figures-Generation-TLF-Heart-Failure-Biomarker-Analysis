@@ -9,8 +9,6 @@ data = pd.read_csv('heart_failure_clinical_records.csv')
 
 plt.figure(figsize=(8, 6))
 
-# We are using seaborn to draw a histogram using the 'age' column from our 'data'.
-# The 'hue' setting tells it to color the bars differently based on whether the patient passed away ('DEATH_EVENT').
 sns.histplot(data=data, x='age', hue='DEATH_EVENT', multiple='stack')
 
 plt.title('Figure 1: Distribution of Patient Age by Survival')
