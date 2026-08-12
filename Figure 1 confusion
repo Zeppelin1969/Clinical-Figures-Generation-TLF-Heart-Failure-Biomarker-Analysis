@@ -1,3 +1,5 @@
+EDIT: solved
+
 Because we asked Seaborn to draw two separate histograms on the exact same chart (one for survivors, and one for patients who passed away), sometimes the bars need to occupy the exact same space.
 
 By default, Seaborn makes the bars slightly transparent (see-through). So, if the color for "survived" (0) is blue, and the color for "passed away" (1) is orange, the place where they overlap will mix into a third, darker/brownish color.
